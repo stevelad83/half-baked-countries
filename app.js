@@ -1,7 +1,7 @@
 /* Imports */
 // Slice A: import getCountries from fetch-utils.js
 // Slice B: import getContinents from fetch-utils.js
-
+import { getCountries, getContinents } from './fetch-utils.js';
 import { renderContinentOption, renderCountry } from './render-utils.js';
 
 /* Get DOM Elements */
