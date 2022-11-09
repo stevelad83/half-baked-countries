@@ -11,15 +11,11 @@ export async function getCountries(continent) {
     if (continent) {
         query = query.eq('continent', continent);
     }
-    // await the query and set to a response variable (Slice A)
     const response = await query;
-    // return the response (Slice A)
     return response;
 }
 
 export async function getContinents() {
     const response = await client.from('country_continents').select('*');
     return response;
-    // Slice B: write an awaited client query to country_continent table and get all columns
-    // Slice B: return the response
 }
