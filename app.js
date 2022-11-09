@@ -28,7 +28,6 @@ async function findCountries(continent) {
     // Slice C: add continent argument to getCountries function call
     // console log the response object to see all of the nested information returned
     countries = response.data;
-    console.log(countries);
     // Slice A: set the countries state to the response.data
     // Slice A: call displayCountries function;
     displayCountries();
@@ -43,8 +42,10 @@ searchForm.addEventListener('submit', (e) => {
 /* Display Functions */
 function displayCountries() {
     //Slice A: reset the countries List
-
+    countryList.innerHTML = '';
     for (const country of countries) {
+        const countryEl = renderCountry(country);
+        countryList.append(countryEl);
         // Slice A: Call imported render countries function and append to list
     }
 }
